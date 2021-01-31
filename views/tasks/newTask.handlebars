@@ -1,0 +1,36 @@
+<h4>Add a task</h4>
+
+<form action="/tasks/newTask" method="POST" class="form-newTask">
+
+    <input type="text" name="task" id="" placeholder="Escribe aquí..." autofocus>
+    <select name="state" id="">
+        <option value="Done">Done</option>
+        <option value="Undone">Undone</option>
+    </select>
+    <input type="submit">
+
+</form>
+
+
+{{!-- <script>
+
+var formulario = document.querySelector("form");
+var ul = document.querySelector("ul");
+var input = document.querySelector("input[type='text']");
+
+var tareas = [];
+
+
+formulario.onsubmit = evento => {
+    evento.preventDefault();
+    tareas.push(input.value);
+
+    var li = document.createElement("li");
+    li.textContent = input.value;
+    ul.appendChild(li);
+    input.value = null;
+    
+    console.log(tareas);
+}
+
+</script> --}}
