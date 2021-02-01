@@ -9,8 +9,8 @@ router.get('/', function(req, res) {
     res.render('home', {layout: 'main'});
   });
 
-router.get('/', userController.showLogin);
+router.get('/tasks/newTask', userController.showLogin);
 
-router.post('/', loginController.enter);
+router.post('/tasks/allTask', loginController.enter);
 
 module.exports = router;

@@ -8,10 +8,6 @@ var app = express();
 
 require('./db');
 
-// RUTAS
-app.use(require('./routes/loginRoute'));
-app.use(require('./routes/taskRoute'));
-
 // HANDLEBARS
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
@@ -24,6 +20,10 @@ app.set('views', __dirname + '/views');
 
 // ARCHIVOS ESTÁTICOS
 app.use(express.static(__dirname + '/public'));
+
+// RUTAS
+app.use(require('./routes/loginRoute'));
+app.use(require('./routes/taskRoute'));
 
 // SERVIDOR
 app.listen(3009, () => {
